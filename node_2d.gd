@@ -24,4 +24,5 @@ func _on_button_pressed():
 	print(test_inc)
 	$Label.text = "meow"
 	$Button.text = "Никита"
+	$Button.icon = preload("res://milye-zveriushki.-4-1.webp")
 	pass # Replace with function body.

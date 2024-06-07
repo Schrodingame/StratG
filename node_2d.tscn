@@ -12,6 +12,7 @@ offset_right = 328.0
 offset_bottom = 144.0
 text = "Test butt
 "
+icon_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 offset_left = 152.0

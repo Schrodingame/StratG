@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06ojs362t4up"]
+
+[ext_resource type="Script" path="res://Scripts/UI/node_2d.gd" id="1_m7ftw"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_m7ftw")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 24.0
+offset_top = 40.0
+offset_right = 328.0
+offset_bottom = 144.0
+text = "Test butt
+"
+icon_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 152.0
+offset_top = 168.0
+offset_right = 208.0
+offset_bottom = 200.0
+text = "Бррр
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

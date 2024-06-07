@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c06ojs362t4up"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Window" type="Window" parent="."]
+size = Vector2i(1920, 1080)

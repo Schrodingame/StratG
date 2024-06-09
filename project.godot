@@ -15,6 +15,17 @@ run/main_scene="res://Scenes/Game.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://Media/icon.svg"
 
+[autoload]
+
+Global="*res://Scripts/global.gd"
+
+[display]
+
+window/size/viewport_width=1700
+window/size/viewport_height=860
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
 [input]
 
 right={

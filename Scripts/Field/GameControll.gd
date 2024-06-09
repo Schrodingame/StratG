@@ -41,7 +41,9 @@ func _on_dice_drop_pressed():
 		money+=2000
 	else : actCell+=result
 	if (actCell==5||actCell==15||actCell==25||actCell==35) :
-		OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+		#OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+		# Sorry, it bothers me...
+		pass
 	$Dice_1.text=str(dice_1)
 	if dice_1==1: 
 		$Dice_1_visual/Side1Pip.set_visible(true)

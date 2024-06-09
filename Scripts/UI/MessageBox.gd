@@ -8,8 +8,8 @@ func reset_text():
 	for m in messages:
 		text += m + "\n";
 
-func _ready():
-	print( get_class() + " READY" )
+#func _ready():
+#	print( get_class() + " READY" )
 
 
 func add_message( msg: String, playernum: int = -1 ):

@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://dprc2l020lanb"]
+
+[ext_resource type="Texture2D" uid="uid://c7d6wvto6rhrg" path="res://Media/Dice/side_1_pip.png" id="1_7rkcu"]
+[ext_resource type="Script" path="res://Scripts/UI/Dice_d6.gd" id="1_exly3"]
+[ext_resource type="Texture2D" uid="uid://dt7buu0u70bdh" path="res://Media/Dice/side_2_pips.png" id="2_4c8ma"]
+[ext_resource type="Texture2D" uid="uid://htbhbc7n8npb" path="res://Media/Dice/side_3_pips.png" id="3_l6p84"]
+[ext_resource type="Texture2D" uid="uid://knbxa7sfg2pj" path="res://Media/Dice/side_4_pips.png" id="4_05e73"]
+[ext_resource type="Texture2D" uid="uid://bvdre0n8cjute" path="res://Media/Dice/side_5_pips.png" id="5_cuv41"]
+[ext_resource type="Texture2D" uid="uid://lip1ncuo8lyp" path="res://Media/Dice/side_6_pips.png" id="6_16sft"]
+
+[node name="Dice_1_visual" type="Node2D"]
+script = ExtResource("1_exly3")
+
+[node name="Side1Pip" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.6, 1.6)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_7rkcu")
+
+[node name="Side2Pips" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.6, 1.6)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_4c8ma")
+
+[node name="Side3Pips" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.6, 1.6)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("3_l6p84")
+
+[node name="Side4Pips" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.6, 1.6)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_05e73")
+
+[node name="Side5Pips" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.6, 1.6)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("5_cuv41")
+
+[node name="Side6Pips" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0.6, 1.6)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("6_16sft")
+
+[node name="DiceLabel" type="Label" parent="."]
+offset_left = -19.0
+offset_top = 32.0
+offset_right = 21.0
+offset_bottom = 55.0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1

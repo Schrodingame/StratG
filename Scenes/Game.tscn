@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c06ojs362t4up"]
+[gd_scene load_steps=13 format=3 uid="uid://c06ojs362t4up"]
 
 [ext_resource type="Script" path="res://Scripts/Field/GameControll.gd" id="1_imivl"]
 [ext_resource type="PackedScene" uid="uid://clqvfv0j573o" path="res://Scenes/playerBody.tscn" id="2_2n1n4"]
 [ext_resource type="Texture2D" uid="uid://dqhu3pag3xim0" path="res://Media/BackGround.png" id="3_whbx1"]
 [ext_resource type="Script" path="res://Scenes/Markers.gd" id="4_kibcx"]
 [ext_resource type="Texture2D" uid="uid://c7d6wvto6rhrg" path="res://Media/Dice/side_1_pip.png" id="5_5bq6v"]
+[ext_resource type="PackedScene" uid="uid://dprc2l020lanb" path="res://Scenes/Dice_d6.tscn" id="5_cmthy"]
 [ext_resource type="PackedScene" uid="uid://c4fqwgnh0u75w" path="res://Scenes/MessageBox.tscn" id="5_oqu4j"]
 [ext_resource type="Texture2D" uid="uid://dt7buu0u70bdh" path="res://Media/Dice/side_2_pips.png" id="6_5uuew"]
 [ext_resource type="Texture2D" uid="uid://htbhbc7n8npb" path="res://Media/Dice/side_3_pips.png" id="7_0e547"]
@@ -38,27 +39,17 @@ offset_right = 1267.0
 offset_bottom = 487.0
 text = "Бросок"
 
-[node name="Dice_1" type="Label" parent="."]
+[node name="Dice_2x" type="Label" parent="."]
 z_index = 1
 z_as_relative = false
-offset_left = 1175.0
-offset_top = 420.0
-offset_right = 1215.0
-offset_bottom = 443.0
-text = "1"
+offset_left = 1207.0
+offset_top = 494.0
+offset_right = 1254.0
+offset_bottom = 517.0
+text = "/6/6/6/6/6/6/6/6/6/"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Dice_2" type="Label" parent="."]
-z_index = 1
-z_as_relative = false
-offset_left = 1242.0
-offset_top = 420.0
-offset_right = 1282.0
-offset_bottom = 443.0
-text = "6"
-horizontal_alignment = 1
-vertical_alignment = 1
+clip_text = true
 
 [node name="BackGround" type="Sprite2D" parent="."]
 position = Vector2(761, 435)
@@ -200,81 +191,49 @@ text = "6666"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Dice_1_visual" type="Node" parent="."]
+[node name="Dice_1_visual" parent="." instance=ExtResource("5_cmthy")]
+position = Vector2(1200, 380)
 
-[node name="Side1Pip" type="Sprite2D" parent="Dice_1_visual"]
-visible = false
-position = Vector2(1200, 390)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("5_5bq6v")
+[node name="Dice_2_visualX" type="Node" parent="."]
 
-[node name="Side2Pips" type="Sprite2D" parent="Dice_1_visual"]
-visible = false
-position = Vector2(1200, 390)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("6_5uuew")
-
-[node name="Side3Pips" type="Sprite2D" parent="Dice_1_visual"]
-visible = false
-position = Vector2(1200, 390)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("7_0e547")
-
-[node name="Side4Pips" type="Sprite2D" parent="Dice_1_visual"]
-visible = false
-position = Vector2(1200, 390)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("8_bak0w")
-
-[node name="Side5Pips" type="Sprite2D" parent="Dice_1_visual"]
-visible = false
-position = Vector2(1200, 390)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("9_8esnd")
-
-[node name="Side6Pips" type="Sprite2D" parent="Dice_1_visual"]
-visible = false
-position = Vector2(1200, 390)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("10_tbno6")
-
-[node name="Dice_2_visual" type="Node" parent="."]
-
-[node name="Side1Pip" type="Sprite2D" parent="Dice_2_visual"]
+[node name="Side1Pip" type="Sprite2D" parent="Dice_2_visualX"]
 visible = false
 position = Vector2(1259.6, 389.6)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("5_5bq6v")
 
-[node name="Side2Pips" type="Sprite2D" parent="Dice_2_visual"]
+[node name="Side2Pips" type="Sprite2D" parent="Dice_2_visualX"]
 visible = false
 position = Vector2(1259.6, 389.6)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("6_5uuew")
 
-[node name="Side3Pips" type="Sprite2D" parent="Dice_2_visual"]
+[node name="Side3Pips" type="Sprite2D" parent="Dice_2_visualX"]
 visible = false
 position = Vector2(1259.6, 389.6)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("7_0e547")
 
-[node name="Side4Pips" type="Sprite2D" parent="Dice_2_visual"]
+[node name="Side4Pips" type="Sprite2D" parent="Dice_2_visualX"]
 visible = false
 position = Vector2(1259.6, 389.6)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("8_bak0w")
 
-[node name="Side5Pips" type="Sprite2D" parent="Dice_2_visual"]
+[node name="Side5Pips" type="Sprite2D" parent="Dice_2_visualX"]
 visible = false
 position = Vector2(1259.6, 389.6)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("9_8esnd")
 
-[node name="Side6Pips" type="Sprite2D" parent="Dice_2_visual"]
+[node name="Side6Pips" type="Sprite2D" parent="Dice_2_visualX"]
 visible = false
 position = Vector2(1259.6, 389.6)
 scale = Vector2(0.05, 0.05)
 texture = ExtResource("10_tbno6")
+
+[node name="Dice_2_visual" parent="." instance=ExtResource("5_cmthy")]
+position = Vector2(1260, 380)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(847, 433)
@@ -287,21 +246,21 @@ offset_top = 322.0
 offset_right = 1680.0
 offset_bottom = 811.0
 
-[node name="PanelContainer" type="PanelContainer" parent="MessageBoxContainer"]
+[node name="Фон и позиция" type="PanelContainer" parent="MessageBoxContainer"]
 layout_mode = 2
 anchor_right = 0.991
 anchor_bottom = 1.063
 offset_right = -0.120026
 offset_bottom = 0.192932
 
-[node name="Выравнивание по краям" type="MarginContainer" parent="MessageBoxContainer/PanelContainer"]
+[node name="Выравнивание по краям" type="MarginContainer" parent="MessageBoxContainer/Фон и позиция"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="MessageBox" parent="MessageBoxContainer/PanelContainer/Выравнивание по краям" instance=ExtResource("5_oqu4j")]
+[node name="MessageBox" parent="MessageBoxContainer/Фон и позиция/Выравнивание по краям" instance=ExtResource("5_oqu4j")]
 layout_mode = 2
 tooltip_text = "Лог сообщений."
 bbcode_enabled = true

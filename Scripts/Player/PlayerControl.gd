@@ -1,11 +1,25 @@
-extends Node
+
+extends CharacterBody2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+var target_position = Vector2()
 
-# Helo worlaaaaaaaaa
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+
+
+func moveToCell(newPos:Vector2):	
+	target_position=newPos
+	"""var direction = global_position.direction_to(target_position)
+	if position.distance_to(target_position)>3:
+		velocity = direction*300.0
+	else: velocity=direction*0
+	move_and_slide()	"""
+	
+func _physics_process(delta):
+	"""var direction = Input.get_vector("left","right","up","down")
+	velocity = direction * 600"""
+	var direction = global_position.direction_to(target_position)
+	if position.distance_to(target_position)>3:
+		velocity = direction*300.0
+	else: velocity=direction*0
+	
+	move_and_slide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c06ojs362t4up"]
+[gd_scene load_steps=8 format=3 uid="uid://c06ojs362t4up"]
 
 [ext_resource type="Script" path="res://Scripts/Field/GameControll.gd" id="1_imivl"]
 [ext_resource type="PackedScene" uid="uid://clqvfv0j573o" path="res://Scenes/playerBody.tscn" id="2_2n1n4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scenes/Markers.gd" id="4_kibcx"]
 [ext_resource type="PackedScene" uid="uid://dprc2l020lanb" path="res://Scenes/Dice_d6.tscn" id="5_cmthy"]
 [ext_resource type="PackedScene" uid="uid://c4fqwgnh0u75w" path="res://Scenes/MessageBox.tscn" id="5_oqu4j"]
+[ext_resource type="Script" path="res://Scripts/MainCamera.gd" id="6_5s7jj"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_imivl")
@@ -191,6 +192,11 @@ position = Vector2(1260, 380)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(850, 430)
+limit_left = 0
+limit_top = 0
+limit_right = 1700
+limit_bottom = 1200
+script = ExtResource("6_5s7jj")
 
 [node name="MessageBoxContainer" type="Control" parent="."]
 layout_mode = 3

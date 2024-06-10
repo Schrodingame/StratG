@@ -41,7 +41,7 @@ func _on_dice_drop_pressed():
 	var dice_1 = $Dice_1_visual.roll();
 	var dice_2 = $Dice_2_visual.roll();
 	result = dice_1+dice_2
-	if (actCell+result)>40:
+	if (actCell+result)>=39:
 		actCell=(actCell+result)-40
 		money+=2000
 	else : actCell+=result

@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://d367ahlp56i3b"]
+
+[ext_resource type="Script" path="res://Scripts/Field/BaseCellCard.gd" id="1_mdhjv"]
+
+[node name="CellCard" type="Control"]
+custom_minimum_size = Vector2(130, 200)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 130.0
+offset_bottom = 200.0
+pivot_offset = Vector2(65, 100)
+script = ExtResource("1_mdhjv")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+offset_right = 130.0
+offset_bottom = 200.0
+size_flags_vertical = 3

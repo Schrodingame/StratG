@@ -191,11 +191,10 @@ position = Vector2(1200, 380)
 position = Vector2(1260, 380)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(850, 430)
 limit_left = 0
 limit_top = 0
-limit_right = 1700
-limit_bottom = 1200
+limit_right = 1920
+limit_bottom = 1080
 script = ExtResource("6_5s7jj")
 
 [node name="MessageBoxContainer" type="Control" parent="."]

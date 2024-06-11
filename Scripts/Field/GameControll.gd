@@ -3,7 +3,6 @@ var rng = RandomNumberGenerator.new()
 var cellsArray = []
 var result
 var actCell
-var money=15000
 var players=[]
 var actPlayer:int=0
 
@@ -19,8 +18,7 @@ func _ready():
 	$Dice_1_visual.update_value( 1 );
 	$Dice_2_visual.update_value( 6 );
 	actCell=0
-	$"Player#1".moveToCell(cellsArray[0].global_position)
-	$Money.text=str(money)
+	$"Player#1".moveToCell(cellsArray[0].global_position)	
 	#add_child( MonopolyPlayer.new() ) На будующее для добавления игроков по подключениям
 	
 
@@ -40,9 +38,7 @@ func _on_dice_drop_pressed():
 
 	print ("Result = ",result)
 	print("ActCell = ",actCell)
-	players[actPlayer].yourTern(result)
-	#$"Player#1".moveToCell(cellsArray[actCell].global_position)	
-	$Money.text=str(money)
+	players[actPlayer].yourTern(result)	
 	nextPlayerMove()
 func nextPlayerMove():
 	if actPlayer+1<players.size():

@@ -1,6 +1,12 @@
-extends VBoxContainer;
+class_name BuildingCard
+extends CellCard;
 
-func on_player_enter():
-	pass
+@export var cost: int = 12345;
+@export var groupcolor: Color = "8888FF";
 
+func _ready():
+	print( get_children() );
+	
+	$"VBoxContainer/Cost".text = str( cost );
+	$VBoxContainer/BuildingGroupColor.color = groupcolor;
 

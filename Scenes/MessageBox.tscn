@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/UI/MessageBox.gd" id="1_xamth"]
 
-[node name="MessageBox" type="RichTextLabel" groups=["global_messages"]]
+[node name="MessageBox" type="RichTextLabel"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

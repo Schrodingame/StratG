@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c06ojs362t4up"]
+[gd_scene load_steps=12 format=3 uid="uid://c06ojs362t4up"]
 
 [ext_resource type="Script" path="res://Scripts/Field/GameControll.gd" id="1_imivl"]
 [ext_resource type="PackedScene" uid="uid://clqvfv0j573o" path="res://Scenes/playerBody.tscn" id="2_2n1n4"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://c4fqwgnh0u75w" path="res://Scenes/MessageBox.tscn" id="5_oqu4j"]
 [ext_resource type="Script" path="res://Scripts/MainCamera.gd" id="6_5s7jj"]
 [ext_resource type="PackedScene" uid="uid://b3sphw4rqan3m" path="res://Scenes/BuildingCard.tscn" id="8_lg0l5"]
+[ext_resource type="Texture2D" uid="uid://bhsoof0j3w1t2" path="res://Media/icon.svg" id="9_63my8"]
+[ext_resource type="Texture2D" uid="uid://knbxa7sfg2pj" path="res://Media/Dice/side_4_pips.png" id="10_a34rb"]
+[ext_resource type="Texture2D" uid="uid://bvdre0n8cjute" path="res://Media/Dice/side_5_pips.png" id="10_t4du7"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_imivl")
@@ -231,8 +234,46 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="BuildingCard" parent="Field" instance=ExtResource("8_lg0l5")]
-cost = 1000
-groupcolor = Color(0.0784314, 0, 0.337255, 1)
+[node name="HBoxContainer" type="HBoxContainer" parent="Field"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 872.0
+offset_right = 539.0
+offset_bottom = 1072.0
+
+[node name="BuildingCard" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "First building"
+card_picture = ExtResource("9_63my8")
+
+[node name="BuildingCard2" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Second"
+card_cost = 1200
+
+[node name="BuildingCard3" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "The name may contain more than one line"
+card_cost = 1750
+
+[node name="BuildingCard4" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Локализация, разумеется"
+card_cost = 2300
+card_picture = ExtResource("10_a34rb")
+group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
+
+[node name="BuildingCard5" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Автоподгонка картинок под количество строк текста"
+card_cost = 2800
+card_picture = ExtResource("10_t4du7")
+group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
+
+[node name="BuildingCard6" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "И т. д."
+card_cost = 3000
+group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
 
 [connection signal="pressed" from="DiceDrop" to="." method="_on_dice_drop_pressed"]

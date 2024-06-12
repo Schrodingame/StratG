@@ -20,7 +20,7 @@ func _ready():
 	actCell=0
 	$"Player#1".moveToCell(cellsArray[0].global_position)	
 	#add_child( MonopolyPlayer.new() ) На будующее для добавления игроков по подключениям
-	
+
 
 func _on_dice_drop_pressed():
 	var dice_1 = $Dice_1_visual.roll();

@@ -20,10 +20,17 @@ shader = ExtResource("2_kx4rb")
 [node name="Game" type="Node2D"]
 script = ExtResource("1_imivl")
 
-[node name="Backgrnd" type="TextureRect" parent="."]
+[node name="CanvasBackgroundLayer" type="CanvasLayer" parent="."]
+layer = -2
+
+[node name="Backgrnd" type="TextureRect" parent="CanvasBackgroundLayer"]
 material = SubResource("ShaderMaterial_uq16l")
-offset_right = 1920.0
-offset_bottom = 1440.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_in5el")
 metadata/_edit_use_anchors_ = true
 
@@ -47,10 +54,11 @@ offset_top = 872.0
 offset_right = 539.0
 offset_bottom = 1072.0
 
-[node name="BuildingCard" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
+[node name="BuildingCard1" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "First building"
 card_picture = ExtResource("9_63my8")
+group_color = Color(0, 0.25098, 0.0823529, 1)
 
 [node name="BuildingCard2" parent="Field/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
@@ -81,6 +89,43 @@ layout_mode = 2
 card_name = "И т. д."
 card_cost = 3000
 group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Field"]
+layout_mode = 0
+offset_left = 924.0
+offset_top = 870.0
+offset_right = 1724.0
+offset_bottom = 1070.0
+
+[node name="SBuildingCard" parent="Field/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "First building"
+card_picture = ExtResource("9_63my8")
+group_color = Color(0.59, 0.6, 0, 1)
+
+[node name="SBuildingCard2" parent="Field/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Second"
+card_cost = 1200
+
+[node name="SBuildingCard3" parent="Field/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "The name may contain more than one line"
+card_cost = 1750
+
+[node name="OutBuildingCard" parent="Field" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 104.0
+offset_top = 293.0
+offset_right = 234.0
+offset_bottom = 493.0
+card_name = "Карта вне UI-контейнеров"
+card_cost = 1600
+card_picture = ExtResource("10_a34rb")
+group_color = Color(0.00107712, 0.445837, 0.443157, 1)
 
 [node name="Player#1" parent="." instance=ExtResource("2_2n1n4")]
 light_mask = 3

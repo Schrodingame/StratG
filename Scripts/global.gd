@@ -1,6 +1,10 @@
 extends Node;
 
-@onready var messagebox: Control
+var cells: Array[CellCard];
+var players: Array[MonopolyPlayer];
+
+
+@onready var messagebox: Control;
 
 func _ready():
 	if ( get_node_or_null( "/root/Game/MessageBoxContainer" ) ):
@@ -10,4 +14,5 @@ func send_message( msg: String, playernum: int = -1 ):
 	if ( messagebox ):
 		messagebox.add_message( msg, playernum )
 	else:
-		push_warning( "No MessageBox. List: ", get_tree() )
+		push_warning( "Global.send_message(). No MessageBox." );
+		print_stack();

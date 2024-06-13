@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3sphw4rqan3m"]
 
-[ext_resource type="Script" path="res://Scripts/Field/CardCell.gd" id="1_kj4qc"]
+[ext_resource type="Script" path="res://Scripts/Field/BuildingCard.gd" id="1_kj4qc"]
 
 [node name="BuildingCard" type="Control"]
 custom_minimum_size = Vector2(130, 200)
@@ -83,3 +83,5 @@ grow_vertical = 0
 size_flags_horizontal = 3
 text = "1000$"
 vertical_alignment = 1
+
+[connection signal="dirty" from="." to="." method="_update_card"]

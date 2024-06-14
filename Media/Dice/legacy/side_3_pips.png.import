@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo6gj7o3glrf8"
-path="res://.godot/imported/side_3_pips.png-bf22022b1cfdbea5a26a250c7c31bea5.ctex"
+uid="uid://htbhbc7n8npb"
+path="res://.godot/imported/side_3_pips.png-2d4ed3fc98f5378fc8893cf4d2e45a07.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Media/Dice/side_3_pips.png"
-dest_files=["res://.godot/imported/side_3_pips.png-bf22022b1cfdbea5a26a250c7c31bea5.ctex"]
+source_file="res://Media/Dice/legacy/side_3_pips.png"
+dest_files=["res://.godot/imported/side_3_pips.png-2d4ed3fc98f5378fc8893cf4d2e45a07.ctex"]
 
 [params]
 

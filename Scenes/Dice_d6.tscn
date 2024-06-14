@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://dprc2l020lanb"]
 
-[ext_resource type="Texture2D" uid="uid://c7d6wvto6rhrg" path="res://Media/Dice/side_1_pip.png" id="1_7rkcu"]
+[ext_resource type="Texture2D" uid="uid://c7d6wvto6rhrg" path="res://Media/Dice/legacy/side_1_pip.png" id="1_7rkcu"]
 [ext_resource type="Script" path="res://Scripts/UI/Dice_d6.gd" id="1_exly3"]
-[ext_resource type="Texture2D" uid="uid://dt7buu0u70bdh" path="res://Media/Dice/side_2_pips.png" id="2_4c8ma"]
-[ext_resource type="Texture2D" uid="uid://htbhbc7n8npb" path="res://Media/Dice/side_3_pips.png" id="3_l6p84"]
-[ext_resource type="Texture2D" uid="uid://knbxa7sfg2pj" path="res://Media/Dice/side_4_pips.png" id="4_05e73"]
-[ext_resource type="Texture2D" uid="uid://bvdre0n8cjute" path="res://Media/Dice/side_5_pips.png" id="5_cuv41"]
-[ext_resource type="Texture2D" uid="uid://lip1ncuo8lyp" path="res://Media/Dice/side_6_pips.png" id="6_16sft"]
+[ext_resource type="Texture2D" uid="uid://dt7buu0u70bdh" path="res://Media/Dice/legacy/side_2_pips.png" id="2_4c8ma"]
+[ext_resource type="Texture2D" uid="uid://htbhbc7n8npb" path="res://Media/Dice/legacy/side_3_pips.png" id="3_l6p84"]
+[ext_resource type="Texture2D" uid="uid://knbxa7sfg2pj" path="res://Media/Dice/legacy/side_4_pips.png" id="4_05e73"]
+[ext_resource type="Texture2D" uid="uid://bvdre0n8cjute" path="res://Media/Dice/legacy/side_5_pips.png" id="5_cuv41"]
+[ext_resource type="Texture2D" uid="uid://lip1ncuo8lyp" path="res://Media/Dice/legacy/side_6_pips.png" id="6_16sft"]
 
 [node name="Dice_1_visual" type="Node2D"]
 script = ExtResource("1_exly3")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://clqvfv0j573o"]
 
 [ext_resource type="Script" path="res://Scripts/Player/PlayerControl.gd" id="1_a41aa"]
-[ext_resource type="Texture2D" uid="uid://bp3ii16qsxw8q" path="res://Media/Player.png" id="1_p3cse"]
+[ext_resource type="Texture2D" uid="uid://d016fl6bwrdxk" path="res://Media/Фишка/Main.png" id="2_a7cuh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ptvj2"]
 radius = 1.41421
@@ -10,7 +10,8 @@ radius = 1.41421
 script = ExtResource("1_a41aa")
 
 [node name="Player" type="Sprite2D" parent="."]
-texture = ExtResource("1_p3cse")
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_a7cuh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)

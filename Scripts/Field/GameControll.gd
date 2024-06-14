@@ -22,20 +22,13 @@ func _on_dice_drop_pressed():
 	var dice_1 = $Dice_1_visual.roll();
 	var dice_2 = $Dice_2_visual.roll();	
 	result = dice_1+dice_2
-	"if (actCell+result)>=39:
-		actCell=(actCell+result)-40
-		money+=2000
-	else : actCell+=result"
-
 	if (actCell==5||actCell==15||actCell==25||actCell==35) :
 		
 		pass
-
-	print ("Result = ",result)
-	print("ActCell = ",actCell)
 	players[actPlayer].yourTern(result)	
 	nextPlayerMove()
-func nextPlayerMove():
+	
+func nextPlayerMove(): #смена игроков
 	if actPlayer+1<players.size():
 		actPlayer+=1
 	else: actPlayer=0

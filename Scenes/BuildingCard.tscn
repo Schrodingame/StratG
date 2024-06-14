@@ -70,6 +70,7 @@ grow_vertical = 2
 [node name="Picture" type="TextureRect" parent="VBoxContainer/PlayerColor/AspectRatioContainer"]
 layout_mode = 2
 expand_mode = 2
+stretch_mode = 5
 
 [node name="Cost" type="Label" parent="VBoxContainer/PlayerColor"]
 layout_mode = 1

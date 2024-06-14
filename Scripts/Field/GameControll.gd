@@ -7,10 +7,6 @@ var players=[]
 var actPlayer:int=0
 
 func _ready():
-	for child in $Markers.get_children():
-		if child is Marker2D:
-			cellsArray.append(child)	
-	print(cellsArray)
 	for child in $".".get_children():
 		if child is CharacterBody2D:
 			players.append(child)
@@ -18,7 +14,7 @@ func _ready():
 	$Dice_1_visual.update_value( 1 );
 	$Dice_2_visual.update_value( 6 );
 	actCell=0
-	$"Player#1".moveToCell(cellsArray[0].global_position)	
+	#$"Player#1".moveToCell(Global.cells[0].global_position)	
 	#add_child( MonopolyPlayer.new() ) На будующее для добавления игроков по подключениям
 
 

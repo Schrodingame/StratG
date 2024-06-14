@@ -16,22 +16,17 @@ func _physics_process(_delta):
 		velocity = direction*300.0
 	else:
 		velocity=direction*0
-		isOnPosition=true
-		#get_Parent().actPlayer
-		 # .nextPlayerMove()
-	
+		isOnPosition=true		
 	move_and_slide()
 	
 func yourTern(result:int):  
-	if (actCell+result)>=39:
-		actCell=(actCell+result)-40
+	if (actCell+result)>=Global.cells.size():
+		actCell=(actCell+result)-Global.cells.size()
 		money+=2000
 	else : actCell+=result	
 	for i in range(actCell,actCell+result):
 		isOnPosition=false
 		await isOnPosition
-		
-		
 	$"../Money".text=str(money)	
-	moveToCell($"..".cellsArray[actCell].global_position)
+	moveToCell(Global.cells[actCell].get_center())
 	#moveToCell()

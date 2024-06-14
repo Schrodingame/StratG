@@ -32,8 +32,7 @@ func _on_dice_drop_pressed():
 	else : actCell+=result"
 
 	if (actCell==5||actCell==15||actCell==25||actCell==35) :
-		# Sorry, it bothers me...
-		#OS.shell_open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+		
 		pass
 
 	print ("Result = ",result)

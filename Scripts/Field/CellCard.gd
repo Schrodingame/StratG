@@ -45,7 +45,7 @@ func auto_find_next_card() -> CellCard:
 
 
 func get_center() -> Vector2:
-	return position + pivot_offset;
+	return global_position + pivot_offset;
 
 func get_next_card() -> CellCard:
 	if !next_card:

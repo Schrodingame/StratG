@@ -1,51 +1,45 @@
 [gd_scene load_steps=8 format=3 uid="uid://dprc2l020lanb"]
 
-[ext_resource type="Texture2D" uid="uid://c7d6wvto6rhrg" path="res://Media/Dice/legacy/side_1_pip.png" id="1_7rkcu"]
 [ext_resource type="Script" path="res://Scripts/UI/Dice_d6.gd" id="1_exly3"]
-[ext_resource type="Texture2D" uid="uid://dt7buu0u70bdh" path="res://Media/Dice/legacy/side_2_pips.png" id="2_4c8ma"]
-[ext_resource type="Texture2D" uid="uid://htbhbc7n8npb" path="res://Media/Dice/legacy/side_3_pips.png" id="3_l6p84"]
-[ext_resource type="Texture2D" uid="uid://knbxa7sfg2pj" path="res://Media/Dice/legacy/side_4_pips.png" id="4_05e73"]
-[ext_resource type="Texture2D" uid="uid://bvdre0n8cjute" path="res://Media/Dice/legacy/side_5_pips.png" id="5_cuv41"]
-[ext_resource type="Texture2D" uid="uid://lip1ncuo8lyp" path="res://Media/Dice/legacy/side_6_pips.png" id="6_16sft"]
+[ext_resource type="Texture2D" uid="uid://bd3otunaqvwox" path="res://Media/Dice/side_1_pip.png" id="2_0km21"]
+[ext_resource type="Texture2D" uid="uid://cthuwy0p3pvdp" path="res://Media/Dice/side_2_pips.png" id="3_7tec3"]
+[ext_resource type="Texture2D" uid="uid://bo6gj7o3glrf8" path="res://Media/Dice/side_3_pips.png" id="4_faara"]
+[ext_resource type="Texture2D" uid="uid://b10yn4v17j2ys" path="res://Media/Dice/side_4_pips.png" id="5_w5sgo"]
+[ext_resource type="Texture2D" uid="uid://vffmkrasa7xv" path="res://Media/Dice/side_5_pips.png" id="6_khv1n"]
+[ext_resource type="Texture2D" uid="uid://de57mdny0iy0f" path="res://Media/Dice/side_6_pips.png" id="7_dxr0t"]
 
 [node name="Dice_1_visual" type="Node2D"]
 script = ExtResource("1_exly3")
 
 [node name="Side1Pip" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0.6, 1.6)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_7rkcu")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_0km21")
 
 [node name="Side2Pips" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0.6, 1.6)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_4c8ma")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_7tec3")
 
 [node name="Side3Pips" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0.6, 1.6)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("3_l6p84")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("4_faara")
 
 [node name="Side4Pips" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0.6, 1.6)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("4_05e73")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("5_w5sgo")
 
 [node name="Side5Pips" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0.6, 1.6)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("5_cuv41")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_khv1n")
 
 [node name="Side6Pips" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0.6, 1.6)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("6_16sft")
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("7_dxr0t")
 
 [node name="DiceLabel" type="Label" parent="."]
 offset_left = -19.0

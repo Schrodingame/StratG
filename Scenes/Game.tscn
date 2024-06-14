@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://clqvfv0j573o" path="res://Scenes/playerBody.tscn" id="2_2n1n4"]
 [ext_resource type="Texture2D" uid="uid://c5yp70p0koid2" path="res://Media/Backgrnd/1626163837_36-kartinkin-com-p-zelenaya-tekstura-besshovnaya-krasivo-39.jpg" id="2_in5el"]
 [ext_resource type="Shader" path="res://Scenes/GameBackground.gdshader" id="2_kx4rb"]
-[ext_resource type="Texture2D" uid="uid://dqhu3pag3xim0" path="res://Media/BackGround.png" id="3_whbx1"]
+[ext_resource type="Texture2D" uid="uid://dytk5m20esnve" path="res://Media/Battlefield.png" id="4_5s778"]
 [ext_resource type="PackedScene" uid="uid://dprc2l020lanb" path="res://Scenes/Dice_d6.tscn" id="5_cmthy"]
 [ext_resource type="PackedScene" uid="uid://c4fqwgnh0u75w" path="res://Scenes/MessageBox.tscn" id="5_oqu4j"]
 [ext_resource type="Script" path="res://Scripts/MainCamera.gd" id="6_5s7jj"]
@@ -43,11 +43,11 @@ metadata/_edit_lock_ = true
 
 [node name="Manager field picture" type="Sprite2D" parent="."]
 position = Vector2(761, 435)
-scale = Vector2(0.4, 0.416)
-texture = ExtResource("3_whbx1")
+rotation = 3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_5s778")
 flip_h = true
 flip_v = true
-metadata/_edit_lock_ = true
 
 [node name="Field" type="Control" parent="."]
 layout_mode = 3

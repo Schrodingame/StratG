@@ -84,5 +84,3 @@ grow_vertical = 0
 size_flags_horizontal = 3
 text = "1000$"
 vertical_alignment = 1
-
-[connection signal="dirty" from="." to="." method="_update_card"]

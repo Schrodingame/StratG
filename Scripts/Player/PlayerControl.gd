@@ -12,11 +12,13 @@ func moveToCell(newPos:Vector2):
 	
 func _physics_process(_delta):
 	var direction = global_position.direction_to(target_position)
-	if position.distance_to(target_position)>3:
-		velocity = direction*300.0
+
+	if position.distance_to(target_position)>5:
+		velocity = direction*600.0
 	else:
-		velocity=direction*0
-		isOnPosition=true		
+		velocity = Vector2.ZERO;
+		position = target_position;
+		isOnPosition=true
 	move_and_slide()
 	
 func yourTern(result:int):  
@@ -30,5 +32,10 @@ func yourTern(result:int):
 		print(i)
 	$"../Money".text=str(money)	
 	
-	moveToCell(Global.cells[actCell].get_center())
-	#moveToCell()
+	if ( actCell < 0 || actCell >= Global.cells.size() ):
+		var warningstr = "\"actCell\" (== %d) isn't in the \"Global.cells\" range [%d; %d]." % [ actCell, 0, Global.cells.size() - 1 ];
+		push_warning( warningstr );
+		print( warningstr );
+	else:
+		moveToCell(Global.cells[actCell].get_center())
+

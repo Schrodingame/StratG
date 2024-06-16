@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkye54mbdkgoe"]
+
+[ext_resource type="Script" path="res://Scripts/Field/CornerCard.gd" id="1_ai84p"]
+
+[node name="CornerCard" type="Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchor_right = 0.104
+anchor_bottom = 0.185
+offset_right = -69.68
+offset_bottom = 0.199997
+pivot_offset = Vector2(100, 100)
+script = ExtResource("1_ai84p")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.372549)

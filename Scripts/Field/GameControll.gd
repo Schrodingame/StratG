@@ -25,7 +25,7 @@ func _on_dice_drop_pressed():
 	if (actCell==5||actCell==15||actCell==25||actCell==35) :
 		
 		pass
-	players[actPlayer].yourTern(result)	
+	players[actPlayer].yourTern(result)
 	nextPlayerMove()
 	
 func nextPlayerMove(): #смена игроков

@@ -3,14 +3,15 @@ var rng = RandomNumberGenerator.new()
 var cellsArray = []
 var result
 var actCell
-var players=[]
+#var players=[]
 var actPlayer:int=0
 
 func _ready():
 	for child in $".".get_children():
 		if child is CharacterBody2D:
-			players.append(child)
-	print(players)
+			Global.players.append(child)
+			child.playerIndex = Global.players.size() - 1;
+	print(Global.players)
 	$Dice_1_visual.update_value( 1 );
 	$Dice_2_visual.update_value( 6 );
 	actCell=0
@@ -23,10 +24,10 @@ func _on_dice_drop_pressed():
 	var dice_2 = $Dice_2_visual.roll();	
 	result = dice_1+dice_2
 	
-	players[actPlayer].yourTern(result)	
+	Global.players[actPlayer].yourTern(result)	
 	nextPlayerMove()
 	
 func nextPlayerMove(): #смена игроков
-	if actPlayer+1<players.size():
+	if actPlayer+1<Global.players.size():
 		actPlayer+=1
 	else: actPlayer=0

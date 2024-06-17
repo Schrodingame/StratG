@@ -9,6 +9,7 @@ var target_position:Vector2
 signal isOnPosition;
 var turnEnded:bool=false
 var speedS:int = 600
+var playerIndex:int =-1
 
 @onready var curcard: CellCard = Global.cells[ 0 ];
 
@@ -75,7 +76,14 @@ func yourTern(result:int):
 		speedS+=i*10
 		
 		await isOnPosition	
-	curcard.on_player_enter()
+	
+	var bcard: BuildingCard = curcard as BuildingCard;
+	
+	if ( bcard ):
+		bcard.player_index = playerIndex
+		print ("this is bcard player index = ", bcard.player_index)
+		bcard._on_card_update()
+	
 		
 	#Добавить таракана
 	#добавить хлопок ладошкой по столу/лицу/таракану

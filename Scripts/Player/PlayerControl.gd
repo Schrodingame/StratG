@@ -16,7 +16,7 @@ var playerIndex:int =-1
 
 func moveToCell(newPos:Vector2):	
 	target_position=newPos
-	Global.send_message( "moved to pos " + str( newPos ), 1 )	
+	#Global.send_message( "moved to pos " + str( newPos ), 1 )	
 	
 func _physics_process(_delta):
 	var direction = global_position.direction_to(target_position)
@@ -74,16 +74,26 @@ func yourTern(result:int):
 		curcard = curcard.get_next_card();
 		moveToCell(curcard.get_center())
 		speedS+=i*10
+
+		if ( curcard.cellindex == 0 ):
+			money += 2000;
+			Global.send_message( "+ 2000 == " + str( money ) + " монет у игрока " + str( playerIndex ) );
 		
 		await isOnPosition	
 	
 	var bcard: BuildingCard = curcard as BuildingCard;
 	
-	if ( bcard ):
-		bcard.player_index = playerIndex
-		print ("this is bcard player index = ", bcard.player_index)
-		bcard._on_card_update()
-	
+	if ( bcard ):		
+		if bcard.player_index<=-1:
+			bcard.player_index = playerIndex
+			print ("this is bcard player index = ", bcard.player_index)
+			bcard._on_card_update()
+			money-=bcard.card_cost;
+			Global.send_message( "Осталось " + str( money ) + " монет у игрока " + str( playerIndex ) );
+
+		elif ( bcard.player_index != playerIndex ):
+			money-=bcard.card_rent[ bcard.card_upgrade_level ];
+			Global.send_message( "Попал на поле игрока " + str( bcard.player_index ) + ". Осталось " + str( money ) + " монет у игрока " + str( playerIndex ) );
 		
 	#Добавить таракана
 	#добавить хлопок ладошкой по столу/лицу/таракану

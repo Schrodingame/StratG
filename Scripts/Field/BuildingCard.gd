@@ -5,16 +5,26 @@ const DEFAULT_GROUP_COLOR = Color( "FFFFFF00" );
 
 ## Название строения.
 @export var card_name: String = "?":
-	set( val ): emit_signal( "dirtycard" ); card_name = val;
+	set( val ): card_name = val; emit_signal( "dirtycard" );
 ## Стоимость строения. Кстати, пока нет платы за аренду...
 @export var card_cost: int = 1000:
-	set( val ): emit_signal( "dirtycard" ); card_cost = val;
+	set( val ): card_cost = val; emit_signal( "dirtycard" );
 ## Рисунок на карте. Любая текстура (в т. ч. анимированная), но от уровня карты пока не зависит.
 @export var card_picture: Texture2D:
-	set( val ): emit_signal( "dirtycard" ); card_picture = val;
+	set( val ): card_picture = val; emit_signal( "dirtycard" );
 ## Цвет ярлычка группы.
 @export var group_color: Color = DEFAULT_GROUP_COLOR:
 	set( val ): group_color = val; emit_signal( "dirtycard" );
+## Цена улучшений (индекс 0 -- первое улучшение).
+@export var card_upgrades_cost: Array[int] = [0, 0, 0, 0]:
+	set( val ): card_upgrades_cost = val; emit_signal( "dirtycard" );
+## Цена аренды на разных уровнях улучшений.
+@export var card_rent: Array[int] = [1000, 0, 0, 0]:
+	set( val ): card_rent = val; emit_signal( "dirtycard" );
+## Цена аренды на разных уровнях улучшений.
+@export var card_upgrade_level: int = 0:
+	set( val ): card_upgrade_level = val; emit_signal( "dirtycard" );
+
 
 
 @export_group( "Дополнительно" )

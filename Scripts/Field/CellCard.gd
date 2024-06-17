@@ -92,7 +92,7 @@ func add_to_global_array():
 		print( "<", self, ">::add_to_global_array(). Skipped invisible Node." );
 	elif get_id() == -1:
 		Global.cells.append( self );
-		cellindex = Global.cells.size();
+		cellindex = Global.cells.size() - 1;
 	else:
 		push_warning( "<", self, ">::add_to_global_array(). Already there (index", get_id(), ")." );
 

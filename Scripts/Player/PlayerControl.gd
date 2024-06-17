@@ -1,10 +1,17 @@
 class_name MonopolyPlayer
 extends CharacterBody2D
-var target_position = Vector2()
 #var result:int
 var actCell:int=0
+var nextCell:int=0
 var money:int=15000
-var isOnPosition:bool = false
+var target_position:Vector2
+#var isOnPosition:Signal
+signal isOnPosition;
+var turnEnded:bool=false
+var speedS:int = 600
+
+@onready var curcard: CellCard = Global.cells[ 0 ];
+
 
 func moveToCell(newPos:Vector2):	
 	target_position=newPos
@@ -13,29 +20,69 @@ func moveToCell(newPos:Vector2):
 func _physics_process(_delta):
 	var direction = global_position.direction_to(target_position)
 
-	if position.distance_to(target_position)>5:
-		velocity = direction*600.0
+	if position.distance_to(target_position)>50:
+		velocity = direction*speedS
 	else:
 		velocity = Vector2.ZERO;
 		position = target_position;
-		isOnPosition=true
+		
 	move_and_slide()
-	
+	if (position.distance_to(target_position)<50):
+		emit_signal("isOnPosition")
+
+func _ready():
+	target_position = Global.cells[0].get_center()
+	connect( "isOnPosition", on_position );
+	$TextureB.self_modulate=Color(randf(),randf(),randf())
+
+func on_position():
+	#print( self, "::on_position() ",  actCell )
+	pass
+
 func yourTern(result:int):  
-	if (actCell+result)>Global.cells.size():
-		actCell=(actCell+result)-Global.cells.size()
-		money+=2000
-	else : actCell+=result	
-	for i in range(actCell,actCell+result):
-		isOnPosition=false
-		await isOnPosition
-		print(i)
-	$"../Money".text=str(money)	
-	
-	if ( actCell < 0 || actCell >= Global.cells.size() ):
+	speedS=400.0
+	#if (actCell+result)>=Global.cells.size():
+		#
+		#money+=2000
+		#
+		#for i in range(actCell,Global.cells.size()):			
+			#nextCell = i
+			#moveToCell(Global.cells[nextCell].get_center())
+			#await isOnPosition
+			#print(i)
+			#$"../Money".text=str(money)
+		#for i in range(0,(actCell+result)-Global.cells.size()):
+			#nextCell = i
+			#moveToCell(Global.cells[nextCell].get_center())
+			#await isOnPosition
+			#print(i)
+		#actCell=(actCell+result)-Global.cells.size()
+		#nextCell=actCell
+		#
+	#else : 
+			#for i in range(actCell,actCell+result):
+				##isOnPosition=false
+				#nextCell = i
+				#moveToCell(Global.cells[nextCell].get_center())
+				#await isOnPosition
+				#print(i)
+				#$"../Money".text=str(money)	
+			#actCell+=result
+			#nextCell=actCell;
+	for i in range(result,0,-1):
+		curcard = curcard.get_next_card();
+		moveToCell(curcard.get_center())
+		speedS+=i*10
+		
+		await isOnPosition	
+	curcard.on_player_enter()
+		
+	#Добавить таракана
+	#добавить хлопок ладошкой по столу/лицу/таракану
+	'''if ( actCell < 0 || actCell >= Global.cells.size() ):
 		var warningstr = "\"actCell\" (== %d) isn't in the \"Global.cells\" range [%d; %d]." % [ actCell, 0, Global.cells.size() - 1 ];
 		push_warning( warningstr );
-		print( warningstr );
-	else:
-		moveToCell(Global.cells[actCell].get_center())
+		print( warningstr );'''
+	#else:
+		
 

@@ -22,10 +22,8 @@ func _on_dice_drop_pressed():
 	var dice_1 = $Dice_1_visual.roll();
 	var dice_2 = $Dice_2_visual.roll();	
 	result = dice_1+dice_2
-	if (actCell==5||actCell==15||actCell==25||actCell==35) :
-		
-		pass
-	players[actPlayer].yourTern(result)
+	
+	players[actPlayer].yourTern(result)	
 	nextPlayerMove()
 	
 func nextPlayerMove(): #смена игроков

@@ -56,9 +56,9 @@ offset_bottom = 40.0
 [node name="TopContainer" type="HBoxContainer" parent="Field"]
 layout_mode = 0
 offset_left = 219.0
-offset_top = 3.0
+offset_top = 1.0
 offset_right = 1625.0
-offset_bottom = 203.0
+offset_bottom = 201.0
 scale = Vector2(0.67, 0.67)
 
 [node name="Старт" parent="Field/TopContainer" instance=ExtResource("10_r6bic")]
@@ -120,13 +120,149 @@ card_name = "VK"
 card_cost = 3000
 card_picture = ExtResource("11_6qcel")
 
+[node name="RightContainer" type="HBoxContainer" parent="Field"]
+layout_mode = 0
+offset_left = 1298.0
+offset_top = 1.0
+offset_right = 2704.0
+offset_bottom = 201.0
+rotation = 1.57079
+scale = Vector2(0.67, 0.67)
+
+[node name="Биржа" parent="Field/RightContainer" instance=ExtResource("10_r6bic")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/RightContainer"]
+layout_mode = 2
+
+[node name="Building 1" parent="Field/RightContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Gptek"
+card_picture = ExtResource("6_v5gym")
+group_color = Color(0.957548, 0.330346, 0, 1)
+
+[node name="Building 2" parent="Field/RightContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "(empty)"
+
+[node name="Event 3" parent="Field/RightContainer/HBoxContainer" instance=ExtResource("9_h87tt")]
+layout_mode = 2
+card_name = "Карта события"
+card_picture = ExtResource("10_o6tn3")
+
+[node name="Building 4" parent="Field/RightContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Vodokanal"
+card_cost = 1750
+card_picture = ExtResource("8_rp7bm")
+
+[node name="Event 5" parent="Field/RightContainer" instance=ExtResource("9_h87tt")]
+layout_mode = 2
+card_name = "Карта события"
+card_picture = ExtResource("10_o6tn3")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Field/RightContainer"]
+layout_mode = 2
+
+[node name="Building 6" parent="Field/RightContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Google"
+card_cost = 2300
+card_picture = ExtResource("9_ts1kx")
+group_color = Color(0, 0.199757, 0.299728, 1)
+
+[node name="Building 7" parent="Field/RightContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "VK"
+card_cost = 3000
+card_picture = ExtResource("11_6qcel")
+
+[node name="Event 8" parent="Field/RightContainer/HBoxContainer2" instance=ExtResource("9_h87tt")]
+layout_mode = 2
+card_name = "Карта события"
+card_picture = ExtResource("10_o6tn3")
+
+[node name="Building 9" parent="Field/RightContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "VK"
+card_cost = 3000
+card_picture = ExtResource("11_6qcel")
+
+[node name="BottomContainer" type="HBoxContainer" parent="Field"]
+layout_mode = 0
+offset_left = 1298.0
+offset_top = 1079.0
+offset_right = 2704.0
+offset_bottom = 1279.0
+rotation = 3.14159
+scale = Vector2(0.67, 0.67)
+
+[node name="Старт" parent="Field/BottomContainer" instance=ExtResource("10_r6bic")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Field/BottomContainer"]
+layout_mode = 2
+
+[node name="Building 1" parent="Field/BottomContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Gptek"
+card_picture = ExtResource("6_v5gym")
+group_color = Color(0, 0.25098, 0.0823529, 1)
+
+[node name="Building 2" parent="Field/BottomContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "(empty)"
+
+[node name="Event 3" parent="Field/BottomContainer/HBoxContainer" instance=ExtResource("9_h87tt")]
+layout_mode = 2
+card_name = "Карта события"
+card_picture = ExtResource("10_o6tn3")
+
+[node name="Building 4" parent="Field/BottomContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Vodokanal"
+card_cost = 1750
+card_picture = ExtResource("8_rp7bm")
+
+[node name="Event 5" parent="Field/BottomContainer" instance=ExtResource("9_h87tt")]
+layout_mode = 2
+card_name = "Карта события"
+card_picture = ExtResource("10_o6tn3")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Field/BottomContainer"]
+layout_mode = 2
+
+[node name="Building 6" parent="Field/BottomContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "Google"
+card_cost = 2300
+card_picture = ExtResource("9_ts1kx")
+group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
+
+[node name="Building 7" parent="Field/BottomContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "VK"
+card_cost = 3000
+card_picture = ExtResource("11_6qcel")
+
+[node name="Event 8" parent="Field/BottomContainer/HBoxContainer2" instance=ExtResource("9_h87tt")]
+layout_mode = 2
+card_name = "Карта события"
+card_picture = ExtResource("10_o6tn3")
+
+[node name="Building 9" parent="Field/BottomContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
+layout_mode = 2
+card_name = "VK"
+card_cost = 3000
+card_picture = ExtResource("11_6qcel")
+
 [node name="LeftContainer" type="HBoxContainer" parent="Field"]
 layout_mode = 0
-offset_left = 1299.0
-offset_top = 3.0
-offset_right = 2705.0
-offset_bottom = 203.0
-rotation = 1.57079
+offset_left = 219.0
+offset_top = 1079.0
+offset_right = 1625.0
+offset_bottom = 1279.0
+rotation = 4.71239
 scale = Vector2(0.67, 0.67)
 
 [node name="Биржа" parent="Field/LeftContainer" instance=ExtResource("10_r6bic")]
@@ -182,143 +318,7 @@ layout_mode = 2
 card_name = "Карта события"
 card_picture = ExtResource("10_o6tn3")
 
-[node name="Building 9" parent="Field/LeftContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "VK"
-card_cost = 3000
-card_picture = ExtResource("11_6qcel")
-
-[node name="TopContainer2" type="HBoxContainer" parent="Field"]
-layout_mode = 0
-offset_left = 1298.0
-offset_top = 1079.0
-offset_right = 2704.0
-offset_bottom = 1279.0
-rotation = 3.14159
-scale = Vector2(0.67, 0.67)
-
-[node name="Старт" parent="Field/TopContainer2" instance=ExtResource("10_r6bic")]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Field/TopContainer2"]
-layout_mode = 2
-
-[node name="Building 1" parent="Field/TopContainer2/HBoxContainer" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "Gptek"
-card_picture = ExtResource("6_v5gym")
-group_color = Color(0, 0.25098, 0.0823529, 1)
-
-[node name="Building 2" parent="Field/TopContainer2/HBoxContainer" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "(empty)"
-
-[node name="Event 3" parent="Field/TopContainer2/HBoxContainer" instance=ExtResource("9_h87tt")]
-layout_mode = 2
-card_name = "Карта события"
-card_picture = ExtResource("10_o6tn3")
-
-[node name="Building 4" parent="Field/TopContainer2/HBoxContainer" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "Vodokanal"
-card_cost = 1750
-card_picture = ExtResource("8_rp7bm")
-
-[node name="Event 5" parent="Field/TopContainer2" instance=ExtResource("9_h87tt")]
-layout_mode = 2
-card_name = "Карта события"
-card_picture = ExtResource("10_o6tn3")
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Field/TopContainer2"]
-layout_mode = 2
-
-[node name="Building 6" parent="Field/TopContainer2/HBoxContainer2" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "Google"
-card_cost = 2300
-card_picture = ExtResource("9_ts1kx")
-group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
-
-[node name="Building 7" parent="Field/TopContainer2/HBoxContainer2" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "VK"
-card_cost = 3000
-card_picture = ExtResource("11_6qcel")
-
-[node name="Event 8" parent="Field/TopContainer2/HBoxContainer2" instance=ExtResource("9_h87tt")]
-layout_mode = 2
-card_name = "Карта события"
-card_picture = ExtResource("10_o6tn3")
-
-[node name="Building 9" parent="Field/TopContainer2/HBoxContainer2" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "VK"
-card_cost = 3000
-card_picture = ExtResource("11_6qcel")
-
-[node name="LeftContainer2" type="HBoxContainer" parent="Field"]
-layout_mode = 0
-offset_left = 219.0
-offset_top = 1078.0
-offset_right = 1625.0
-offset_bottom = 1278.0
-rotation = 4.71239
-scale = Vector2(0.67, 0.67)
-
-[node name="Биржа" parent="Field/LeftContainer2" instance=ExtResource("10_r6bic")]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Field/LeftContainer2"]
-layout_mode = 2
-
-[node name="Building 1" parent="Field/LeftContainer2/HBoxContainer" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "Gptek"
-card_picture = ExtResource("6_v5gym")
-group_color = Color(0.957548, 0.330346, 0, 1)
-
-[node name="Building 2" parent="Field/LeftContainer2/HBoxContainer" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "(empty)"
-
-[node name="Event 3" parent="Field/LeftContainer2/HBoxContainer" instance=ExtResource("9_h87tt")]
-layout_mode = 2
-card_name = "Карта события"
-card_picture = ExtResource("10_o6tn3")
-
-[node name="Building 4" parent="Field/LeftContainer2/HBoxContainer" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "Vodokanal"
-card_cost = 1750
-card_picture = ExtResource("8_rp7bm")
-
-[node name="Event 5" parent="Field/LeftContainer2" instance=ExtResource("9_h87tt")]
-layout_mode = 2
-card_name = "Карта события"
-card_picture = ExtResource("10_o6tn3")
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Field/LeftContainer2"]
-layout_mode = 2
-
-[node name="Building 6" parent="Field/LeftContainer2/HBoxContainer2" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "Google"
-card_cost = 2300
-card_picture = ExtResource("9_ts1kx")
-group_color = Color(0, 0.199757, 0.299728, 1)
-
-[node name="Building 7" parent="Field/LeftContainer2/HBoxContainer2" instance=ExtResource("8_lg0l5")]
-layout_mode = 2
-card_name = "VK"
-card_cost = 3000
-card_picture = ExtResource("11_6qcel")
-
-[node name="Event 8" parent="Field/LeftContainer2/HBoxContainer2" instance=ExtResource("9_h87tt")]
-layout_mode = 2
-card_name = "Карта события"
-card_picture = ExtResource("10_o6tn3")
-
-[node name="Building 9" parent="Field/LeftContainer2/HBoxContainer2" node_paths=PackedStringArray("next_card") instance=ExtResource("8_lg0l5")]
+[node name="Building 9" parent="Field/LeftContainer/HBoxContainer2" node_paths=PackedStringArray("next_card") instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
@@ -381,19 +381,19 @@ limit_bottom = 1080
 script = ExtResource("6_5s7jj")
 
 [node name="MessageBoxContainer" type="Control" parent="."]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1546.0
-offset_top = 531.0
-offset_right = 1866.0
-offset_bottom = 1020.0
+offset_left = 1481.0
+offset_top = 480.0
+offset_right = 1861.0
+offset_bottom = 1030.0
 
 [node name="Фон и позиция" type="PanelContainer" parent="MessageBoxContainer"]
 layout_mode = 2
-anchor_right = 0.991
-anchor_bottom = 1.063
-offset_right = -0.120026
-offset_bottom = 0.192932
+anchor_right = 1.0
+anchor_bottom = 1.002
+offset_bottom = -0.100037
 
 [node name="Выравнивание по краям" type="MarginContainer" parent="MessageBoxContainer/Фон и позиция"]
 layout_mode = 2
@@ -406,7 +406,8 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 tooltip_text = "Лог сообщений."
 bbcode_enabled = true
-text = "[center]ДИКИЕ ВИЛКИ[/center]
+text = "[center]──═ ═ ═──[/center]
+[center]ДИКИЕ ВИЛКИ[/center]
 "
 scroll_following = true
 autowrap_mode = 2

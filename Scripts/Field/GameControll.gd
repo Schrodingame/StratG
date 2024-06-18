@@ -15,9 +15,12 @@ func _ready():
 	$Dice_1_visual.update_value( 1 );
 	$Dice_2_visual.update_value( 6 );
 	actCell=0
+	#$Player_1_money.self_modulate(Global.players[0].)
 	#$"Player#1".moveToCell(Global.cells[0].global_position)	
 	#add_child( MonopolyPlayer.new() ) На будующее для добавления игроков по подключениям
-
+func _physics_process(delta):
+	$Player_1_money.text = str("P1  = ",Global.players[0].money)	
+	$Player_2_money.text = str("P2  = ",Global.players[1].money)
 
 func _on_dice_drop_pressed():
 	var dice_1 = $Dice_1_visual.roll();
@@ -31,3 +34,4 @@ func nextPlayerMove(): #смена игроков
 	if actPlayer+1<Global.players.size():
 		actPlayer+=1
 	else: actPlayer=0
+

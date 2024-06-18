@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c06ojs362t4up"]
+[gd_scene load_steps=19 format=3 uid="uid://c06ojs362t4up"]
 
 [ext_resource type="Script" path="res://Scripts/Field/GameControll.gd" id="1_imivl"]
 [ext_resource type="PackedScene" uid="uid://clqvfv0j573o" path="res://Scenes/playerBody.tscn" id="2_2n1n4"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://064fnkdyai6m" path="res://Media/Cards/Карточка извещение.png" id="10_o6tn3"]
 [ext_resource type="PackedScene" uid="uid://bkye54mbdkgoe" path="res://Scenes/CornerCard.tscn" id="10_r6bic"]
 [ext_resource type="Texture2D" uid="uid://chjfuiq1fttm4" path="res://Media/Logos/int/vk.png" id="11_6qcel"]
+[ext_resource type="PackedScene" uid="uid://1olgu8qbmauh" path="res://Scenes/BuyWindow.tscn" id="17_f77ep"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uq16l"]
 shader = ExtResource("2_kx4rb")
@@ -46,6 +47,7 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_5s778")
 flip_h = true
 flip_v = true
+metadata/_edit_lock_ = true
 
 [node name="Field" type="Control" parent="."]
 layout_mode = 3
@@ -363,11 +365,22 @@ horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="Money" type="Label" parent="."]
+[node name="Player_1_money" type="Label" parent="."]
 offset_left = 1308.0
 offset_top = 84.0
 offset_right = 1434.0
 offset_bottom = 139.0
+theme_override_font_sizes/font_size = 40
+text = "6666"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player_2_money" type="Label" parent="."]
+modulate = Color(1, 0.976471, 1, 1)
+offset_left = 1319.0
+offset_top = 141.0
+offset_right = 1445.0
+offset_bottom = 196.0
 theme_override_font_sizes/font_size = 40
 text = "6666"
 horizontal_alignment = 1
@@ -414,5 +427,8 @@ autowrap_mode = 2
 shortcut_keys_enabled = false
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="BuyWindow" parent="." instance=ExtResource("17_f77ep")]
+visible = false
 
 [connection signal="pressed" from="DiceDrop" to="." method="_on_dice_drop_pressed"]

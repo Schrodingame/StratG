@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://c06ojs362t4up"]
+[gd_scene load_steps=39 format=3 uid="uid://c06ojs362t4up"]
 
 [ext_resource type="Script" path="res://Scripts/Field/GameControll.gd" id="1_imivl"]
 [ext_resource type="PackedScene" uid="uid://clqvfv0j573o" path="res://Scenes/playerBody.tscn" id="2_2n1n4"]
@@ -8,15 +8,35 @@
 [ext_resource type="PackedScene" uid="uid://dprc2l020lanb" path="res://Scenes/Dice_d6.tscn" id="5_cmthy"]
 [ext_resource type="PackedScene" uid="uid://c4fqwgnh0u75w" path="res://Scenes/MessageBox.tscn" id="5_oqu4j"]
 [ext_resource type="Script" path="res://Scripts/MainCamera.gd" id="6_5s7jj"]
-[ext_resource type="Texture2D" uid="uid://dge0ncyqtyakr" path="res://Media/Logos/jil/gptek.spb.png" id="6_v5gym"]
+[ext_resource type="Texture2D" uid="uid://ba8e6pvncf0hm" path="res://Media/Logos/pish/baltika.png" id="7_g65dx"]
+[ext_resource type="Texture2D" uid="uid://qoqjxno5kc6e" path="res://Media/Logos/pish/cargill.png" id="8_alpcc"]
 [ext_resource type="PackedScene" uid="uid://b3sphw4rqan3m" path="res://Scenes/BuildingCard.tscn" id="8_lg0l5"]
-[ext_resource type="Texture2D" uid="uid://d1btioxhc5md" path="res://Media/Logos/jil/vodokanal.spb.png" id="8_rp7bm"]
 [ext_resource type="PackedScene" uid="uid://bxhqvdrihytj" path="res://Scenes/EventCard.tscn" id="9_h87tt"]
-[ext_resource type="Texture2D" uid="uid://bi1su35xp5h1h" path="res://Media/Logos/int/google.png" id="9_ts1kx"]
 [ext_resource type="Texture2D" uid="uid://064fnkdyai6m" path="res://Media/Cards/Карточка извещение.png" id="10_o6tn3"]
 [ext_resource type="PackedScene" uid="uid://bkye54mbdkgoe" path="res://Scenes/CornerCard.tscn" id="10_r6bic"]
-[ext_resource type="Texture2D" uid="uid://chjfuiq1fttm4" path="res://Media/Logos/int/vk.png" id="11_6qcel"]
+[ext_resource type="Texture2D" uid="uid://cb8klvkf0eml" path="res://Media/Logos/pish/cherkizovo.png" id="11_dplmo"]
+[ext_resource type="Texture2D" uid="uid://dp1p17rifqcjp" path="res://Media/Logos/prom/kronospan.png" id="12_e61dv"]
+[ext_resource type="Texture2D" uid="uid://df76x6xpmgnor" path="res://Media/Logos/prom/metallprofil.png" id="13_6etan"]
+[ext_resource type="Texture2D" uid="uid://m3xhk3emrcfg" path="res://Media/Logos/agro/aston.png" id="13_geuw1"]
+[ext_resource type="Texture2D" uid="uid://mhltcx5vxwkc" path="res://Media/Logos/prom/tehnikol.png" id="14_7lums"]
+[ext_resource type="Texture2D" uid="uid://dkh7yedfn360m" path="res://Media/Logos/agro/gapresurs.png" id="14_dq3wx"]
+[ext_resource type="Texture2D" uid="uid://bftnspdqh66bp" path="res://Media/Logos/agro/goldenseed.png" id="15_cfpjl"]
+[ext_resource type="Texture2D" uid="uid://bi5lu702p0yex" path="res://Media/Logos/agro/koenigsauces.png" id="16_uouwr"]
+[ext_resource type="Texture2D" uid="uid://dkgpigwt86t6q" path="res://Media/Logos/agro/komos.png" id="17_17dyo"]
 [ext_resource type="PackedScene" uid="uid://1olgu8qbmauh" path="res://Scenes/BuyWindow.tscn" id="17_f77ep"]
+[ext_resource type="Texture2D" uid="uid://c8mnpq16iqggb" path="res://Media/Logos/agro/miratorg.png" id="18_yb0jo"]
+[ext_resource type="Texture2D" uid="uid://n0uuq77st8s8" path="res://Media/Logos/inf/kaspersky.png" id="19_842k4"]
+[ext_resource type="Texture2D" uid="uid://bg7ej36m56v0q" path="res://Media/Logos/inf/softline.png" id="20_gyehf"]
+[ext_resource type="Texture2D" uid="uid://bpi6j3xe6hj8k" path="res://Media/Logos/inf/t1.png" id="21_iqppy"]
+[ext_resource type="Texture2D" uid="uid://cgf6qssotw0ls" path="res://Media/Logos/inj/mosinzhproekt.png" id="22_u1ctq"]
+[ext_resource type="Texture2D" uid="uid://gmtt1d1doef1" path="res://Media/Logos/inj/stng.png" id="23_3rkmj"]
+[ext_resource type="Texture2D" uid="uid://b54ktbis6godl" path="res://Media/Logos/inj/tsm.png" id="24_8c37e"]
+[ext_resource type="Texture2D" uid="uid://t1v2isn2k035" path="res://Media/Logos/negospens/gazfond.png" id="25_bixs5"]
+[ext_resource type="Texture2D" uid="uid://b5sac4iwi1oc7" path="res://Media/Logos/negospens/gazfondpn.png" id="26_lla0c"]
+[ext_resource type="Texture2D" uid="uid://c8xkb1f5au71j" path="res://Media/Logos/negospens/npfb.png" id="27_ooajl"]
+[ext_resource type="Texture2D" uid="uid://x31k6qdt6ptx" path="res://Media/Logos/opt/apple.png" id="28_4righ"]
+[ext_resource type="Texture2D" uid="uid://d2bi212kvasic" path="res://Media/Logos/opt/megapolis.png" id="29_modlf"]
+[ext_resource type="Texture2D" uid="uid://ccvtp3ehog7sc" path="res://Media/Logos/opt/samsung.png" id="30_hx5kq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uq16l"]
 shader = ExtResource("2_kx4rb")
@@ -72,12 +92,13 @@ layout_mode = 2
 [node name="Building 1" parent="Field/TopContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "Gptek"
-card_picture = ExtResource("6_v5gym")
+card_picture = ExtResource("7_g65dx")
 group_color = Color(0, 0.25098, 0.0823529, 1)
 
 [node name="Building 2" parent="Field/TopContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "(empty)"
+card_picture = ExtResource("8_alpcc")
 
 [node name="Event 3" parent="Field/TopContainer/HBoxContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -88,7 +109,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "Vodokanal"
 card_cost = 1750
-card_picture = ExtResource("8_rp7bm")
+card_picture = ExtResource("11_dplmo")
 
 [node name="Event 5" parent="Field/TopContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -102,14 +123,14 @@ layout_mode = 2
 layout_mode = 2
 card_name = "Google"
 card_cost = 2300
-card_picture = ExtResource("9_ts1kx")
+card_picture = ExtResource("12_e61dv")
 group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
 
 [node name="Building 7" parent="Field/TopContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("13_6etan")
 
 [node name="Event 8" parent="Field/TopContainer/HBoxContainer2" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -120,7 +141,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("14_7lums")
 
 [node name="RightContainer" type="HBoxContainer" parent="Field"]
 layout_mode = 0
@@ -140,12 +161,13 @@ layout_mode = 2
 [node name="Building 1" parent="Field/RightContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "Gptek"
-card_picture = ExtResource("6_v5gym")
+card_picture = ExtResource("13_geuw1")
 group_color = Color(0.957548, 0.330346, 0, 1)
 
 [node name="Building 2" parent="Field/RightContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "(empty)"
+card_picture = ExtResource("14_dq3wx")
 
 [node name="Event 3" parent="Field/RightContainer/HBoxContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -156,7 +178,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "Vodokanal"
 card_cost = 1750
-card_picture = ExtResource("8_rp7bm")
+card_picture = ExtResource("15_cfpjl")
 
 [node name="Event 5" parent="Field/RightContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -170,14 +192,14 @@ layout_mode = 2
 layout_mode = 2
 card_name = "Google"
 card_cost = 2300
-card_picture = ExtResource("9_ts1kx")
+card_picture = ExtResource("16_uouwr")
 group_color = Color(0, 0.199757, 0.299728, 1)
 
 [node name="Building 7" parent="Field/RightContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("17_17dyo")
 
 [node name="Event 8" parent="Field/RightContainer/HBoxContainer2" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -188,7 +210,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("18_yb0jo")
 
 [node name="BottomContainer" type="HBoxContainer" parent="Field"]
 layout_mode = 0
@@ -208,12 +230,13 @@ layout_mode = 2
 [node name="Building 1" parent="Field/BottomContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "Gptek"
-card_picture = ExtResource("6_v5gym")
+card_picture = ExtResource("19_842k4")
 group_color = Color(0, 0.25098, 0.0823529, 1)
 
 [node name="Building 2" parent="Field/BottomContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "(empty)"
+card_picture = ExtResource("20_gyehf")
 
 [node name="Event 3" parent="Field/BottomContainer/HBoxContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -224,7 +247,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "Vodokanal"
 card_cost = 1750
-card_picture = ExtResource("8_rp7bm")
+card_picture = ExtResource("21_iqppy")
 
 [node name="Event 5" parent="Field/BottomContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -238,14 +261,14 @@ layout_mode = 2
 layout_mode = 2
 card_name = "Google"
 card_cost = 2300
-card_picture = ExtResource("9_ts1kx")
+card_picture = ExtResource("22_u1ctq")
 group_color = Color(0.347575, 0.0647893, 0.0069689, 1)
 
 [node name="Building 7" parent="Field/BottomContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("23_3rkmj")
 
 [node name="Event 8" parent="Field/BottomContainer/HBoxContainer2" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -256,7 +279,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("24_8c37e")
 
 [node name="LeftContainer" type="HBoxContainer" parent="Field"]
 layout_mode = 0
@@ -276,12 +299,13 @@ layout_mode = 2
 [node name="Building 1" parent="Field/LeftContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "Gptek"
-card_picture = ExtResource("6_v5gym")
+card_picture = ExtResource("25_bixs5")
 group_color = Color(0.957548, 0.330346, 0, 1)
 
 [node name="Building 2" parent="Field/LeftContainer/HBoxContainer" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "(empty)"
+card_picture = ExtResource("26_lla0c")
 
 [node name="Event 3" parent="Field/LeftContainer/HBoxContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -292,7 +316,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "Vodokanal"
 card_cost = 1750
-card_picture = ExtResource("8_rp7bm")
+card_picture = ExtResource("27_ooajl")
 
 [node name="Event 5" parent="Field/LeftContainer" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -306,14 +330,14 @@ layout_mode = 2
 layout_mode = 2
 card_name = "Google"
 card_cost = 2300
-card_picture = ExtResource("9_ts1kx")
+card_picture = ExtResource("28_4righ")
 group_color = Color(0, 0.199757, 0.299728, 1)
 
 [node name="Building 7" parent="Field/LeftContainer/HBoxContainer2" instance=ExtResource("8_lg0l5")]
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("29_modlf")
 
 [node name="Event 8" parent="Field/LeftContainer/HBoxContainer2" instance=ExtResource("9_h87tt")]
 layout_mode = 2
@@ -324,7 +348,7 @@ card_picture = ExtResource("10_o6tn3")
 layout_mode = 2
 card_name = "VK"
 card_cost = 3000
-card_picture = ExtResource("11_6qcel")
+card_picture = ExtResource("30_hx5kq")
 next_card = NodePath("../../../TopContainer/Старт")
 
 [node name="Player#1" parent="." instance=ExtResource("2_2n1n4")]

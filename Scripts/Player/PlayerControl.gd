@@ -32,9 +32,13 @@ func _physics_process(_delta):
 		emit_signal("isOnPosition")
 
 func _ready():
+	
 	target_position = Global.cells[0].get_center()
 	connect( "isOnPosition", on_position );
-	$TextureB.self_modulate=Color(randf(),randf(),randf())		
+	var selfColor = Color(randf(),randf(),randf())	 
+	$TextureB.self_modulate = selfColor
+	$TextureB2.self_modulate = selfColor
+	$TextureB3.self_modulate = selfColor
 func on_position():
 	#print( self, "::on_position() ",  actCell )
 	pass

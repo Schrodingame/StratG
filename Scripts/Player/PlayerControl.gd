@@ -9,9 +9,12 @@ var target_position:Vector2
 signal isOnPosition;
 var turnEnded:bool=false
 var speedS:int = 600
-var playerIndex:int =-1
 var selfColor
+
+## Номер игрока. Для корректной работы обязан совпадать с индексом в Global.players[] (индексация с нуля, автоматически пока ничего не определяется).
+@export var playerIndex:int =-1
 @onready var curcard: CellCard = Global.cells[ 0 ];
+
 
 
 func moveToCell(newPos:Vector2):	
@@ -35,7 +38,7 @@ func _ready():
 	
 	target_position = Global.cells[0].get_center()
 	connect( "isOnPosition", on_position );
-	var selfColor = Color(randf(),randf(),randf())	 
+	selfColor = Color(randf(),randf(),randf())	 
 	$TextureB.self_modulate = selfColor
 	$TextureB2.self_modulate = selfColor
 	$TextureB3.self_modulate = selfColor
@@ -53,39 +56,13 @@ func yourTern(result:int):
 			Global.send_message( "+ 2000 == " + str( money ) + " монет у игрока " + str( playerIndex ) );
 		
 		await isOnPosition	
-	
-	var bcard: BuildingCard = curcard as BuildingCard;
-	var ecard: EventCard = curcard as EventCard;
-	
-	if ( bcard ):		
-		if bcard.player_index<=-1:
-			$"../BuyWindow".show()
-			$"../BuyWindow"._labelText.text = str(bcard.card_cost)
-			await $"../BuyWindow".choused
-			if  $"../BuyWindow".buy:
-				bcard.player_index =  playerIndex 
-				print ("this is bcard player index = ", bcard.player_index)
-				bcard._on_card_update()
-				money-=bcard.card_cost;
-				
-				Global.send_message( "Осталось " + str( money ) + " монет у игрока " + str( playerIndex ) );
-			else :return null
-		elif ( bcard.player_index != playerIndex ):
-			money-=bcard.card_rent[ bcard.card_upgrade_level ];
-			Global.players[bcard.player_index].money+=bcard.card_rent[ bcard.card_upgrade_level ]
-			Global.send_message( "Попал на поле игрока " + str( bcard.player_index ) + ". Осталось " + str( money ) + " монет у игрока " + str( playerIndex ) );
-	if (ecard):
-		var randomCard = ecard.encounter[(randi_range(0,2))]
-		$"../EventWindow".show()
-		$"../EventWindow"._eventText.text = str(randomCard[0])  #Взять текст события
-		money+=randomCard[1]
-		if randomCard[2]!=null:			
-			curcard = Global.cells[randomCard[2]-1]
-			yourTern(1)
-		await $"../EventWindow".accepted
-		
-		ecard.encounter
-		return 0
+
+	curcard.on_player_enter( playerIndex )
+
+	#var bcard: BuildingCard = curcard as BuildingCard;
+	#var ecard: EventCard = curcard as EventCard;
+
+
 	#Добавить таракана
 	#добавить хлопок ладошкой по столу/лицу/таракану
 	'''if ( actCell < 0 || actCell >= Global.cells.size() ):
@@ -93,5 +70,3 @@ func yourTern(result:int):
 		push_warning( warningstr );
 		print( warningstr );'''
 	#else:
-		
-

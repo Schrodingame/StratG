@@ -1,6 +1,7 @@
 extends Window
 
 
+@warning_ignore("unused_variable", "unused_private_class_variable")
 @onready var _eventText =$VBoxContainer/EventText
 
 @onready var EventPopUp = $"."

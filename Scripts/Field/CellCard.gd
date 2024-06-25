@@ -12,7 +12,7 @@ var cellindex: int = -1; # Also an index in the global array.
 
 # === "Virtual" methods ===
 
-func on_player_enter() -> void:
+func on_player_enter( _cur_player_index: int ) -> void:
 	pass
 
 func on_player_exit() -> bool:

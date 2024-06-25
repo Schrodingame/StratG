@@ -2,6 +2,7 @@ extends Window
 
 var cellPrice:int 
 @onready var BuyPopUp = $"."
+@warning_ignore("unused_variable", "unused_private_class_variable")
 @onready var _labelText = $VBoxContainer/Price
 
 signal  choused;

@@ -1,5 +1,5 @@
 extends Node2D
-var rng = RandomNumberGenerator.new()
+#var rng = RandomNumberGenerator.new()
 var cellsArray = []
 var result
 var actCell
@@ -18,7 +18,7 @@ func _ready():
 	#$Player_1_money.self_modulate(Global.players[0].)
 	#$"Player#1".moveToCell(Global.cells[0].global_position)	
 	#add_child( MonopolyPlayer.new() ) На будующее для добавления игроков по подключениям
-func _physics_process(delta):
+func _physics_process(_delta):
 	$Player_1_money.text = str("P1  = ",Global.players[0].money)	
 	$Player_2_money.text = str("P2  = ",Global.players[1].money)
 

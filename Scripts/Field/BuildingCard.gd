@@ -47,6 +47,29 @@ const DEFAULT_GROUP_COLOR = Color( "FFFFFF00" );
 #func set_card_picture( val: Texture2D ): _cpicture.texture = val;
 
 
+func on_player_enter( cur_player_index: int ) -> void:
+	var player: MonopolyPlayer = Global.players[ cur_player_index ];
+
+	if player_index<=-1:
+		var buywindow: Node = $"/root/Game/BuyWindow";
+		
+		buywindow.show()
+		buywindow._labelText.text = str(card_cost)
+		await buywindow.choused
+		if  buywindow.buy:
+			player_index =  cur_player_index
+			print ("this is bcard player index = ", player_index)
+			_on_card_update()
+			player.money-=card_cost;
+			
+			Global.send_message( "Осталось " + str( player.money ) + " монет у игрока " + str( cur_player_index ) );
+
+	elif ( player_index != cur_player_index ):
+		player.money-=card_rent[ card_upgrade_level ];
+		Global.players[player_index].money+=card_rent[ card_upgrade_level ]
+		Global.send_message( "Попал на поле игрока " + str( player_index ) + ". Осталось " + str( player.money ) + " монет у игрока " + str( cur_player_index ) );
+
+
 func _ready():
 	super();
 	#print( get_children() );
@@ -73,6 +96,6 @@ func _on_card_update():
 	else:
 		_cplayercolor.color = "#0F0F0F";
 
-	print("player_index ", player_index, ", color ", _cplayercolor.color, "players.size() ", Global.players.size() )
+	#print("player_index ", player_index, ", color ", _cplayercolor.color, "players.size() ", Global.players.size() )
 
 	_cbackground.color = background_color;

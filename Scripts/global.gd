@@ -6,8 +6,9 @@ var players: Array[MonopolyPlayer];
 @onready var messagebox: Control;
 
 func _ready():
-	if ( get_node_or_null( "/root/Game/MessageBoxContainer" ) ):
-		messagebox = $"/root/Game/MessageBoxContainer".find_child( "MessageBox" );
+	var msgbox = get_node_or_null( ^"/root/Game/MessageBoxContainer" );
+	if ( msgbox ):
+		messagebox = msgbox.find_child( "MessageBox" );
 		
 func send_message( msg: String, playernum: int = -1 ):
 	if ( messagebox ):

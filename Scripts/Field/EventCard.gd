@@ -19,6 +19,22 @@ extends CellCard;
 @onready var _cbackground = $Background;
 
 
+func on_player_enter( cur_player_index: int ):
+	var player: MonopolyPlayer = Global.players[ cur_player_index ];
+	var eventwindow: Node = $"/root/Game/EventWindow";
+
+	var randomCardData = encounter[(randi_range(0,2))]
+
+	eventwindow.show()
+	eventwindow._eventText.text = str(randomCardData[0])  #Взять текст события
+	player.money+=randomCardData[1]
+	if randomCardData.size() > 2 && randomCardData[2]!=null:			
+		player.curcard = Global.cells[randomCardData[2]-1]
+		player.yourTern(1)
+
+	await eventwindow.accepted
+
+
 func _on_card_update():
 	_cname.text = card_name;
 	_cpicture.texture = card_picture;

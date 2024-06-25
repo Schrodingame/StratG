@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://dudnvq7xlmumc"]
+
+[ext_resource type="Script" path="res://EventWindow.gd" id="1_kliig"]
+
+[node name="Window" type="Window"]
+initial_position = 1
+size = Vector2i(400, 400)
+script = ExtResource("1_kliig")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.5
+offset_top = -46.5
+offset_right = 50.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EventText" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Неторое событие
+тут 
+будет
+его
+крааааааааткое описание
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Accept" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Понял, принял."
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
+[connection signal="button_up" from="VBoxContainer/Accept" to="." method="_on_to_buy_button_up"]
+[connection signal="button_up" from="VBoxContainer/Accept" to="." method="_on_accept_button_up"]

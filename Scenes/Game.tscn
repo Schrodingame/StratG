@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c06ojs362t4up"]
+[gd_scene load_steps=40 format=3 uid="uid://c06ojs362t4up"]
 
 [ext_resource type="Script" path="res://Scripts/Field/GameControll.gd" id="1_imivl"]
 [ext_resource type="PackedScene" uid="uid://clqvfv0j573o" path="res://Scenes/playerBody.tscn" id="2_2n1n4"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://x31k6qdt6ptx" path="res://Media/Logos/opt/apple.png" id="28_4righ"]
 [ext_resource type="Texture2D" uid="uid://d2bi212kvasic" path="res://Media/Logos/opt/megapolis.png" id="29_modlf"]
 [ext_resource type="Texture2D" uid="uid://ccvtp3ehog7sc" path="res://Media/Logos/opt/samsung.png" id="30_hx5kq"]
+[ext_resource type="PackedScene" uid="uid://dudnvq7xlmumc" path="res://Scenes/EventWindow.tscn" id="38_jybd2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uq16l"]
 shader = ExtResource("2_kx4rb")
@@ -453,6 +454,9 @@ shortcut_keys_enabled = false
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="BuyWindow" parent="." instance=ExtResource("17_f77ep")]
+visible = false
+
+[node name="EventWindow" parent="." instance=ExtResource("38_jybd2")]
 visible = false
 
 [connection signal="pressed" from="DiceDrop" to="." method="_on_dice_drop_pressed"]

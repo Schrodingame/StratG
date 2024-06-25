@@ -28,7 +28,7 @@ func _physics_process(_delta):
 		position = target_position;
 		
 	move_and_slide()
-	if (position.distance_to(target_position)<50):
+	if (position.distance_to(target_position)<10):
 		emit_signal("isOnPosition")
 
 func _ready():
@@ -43,40 +43,10 @@ func on_position():
 	#print( self, "::on_position() ",  actCell )
 	pass
 
-func yourTern(result:int):  
-	speedS=400.0
-	#if (actCell+result)>=Global.cells.size():
-		#
-		#money+=2000
-		#
-		#for i in range(actCell,Global.cells.size()):			
-			#nextCell = i
-			#moveToCell(Global.cells[nextCell].get_center())
-			#await isOnPosition
-			#print(i)
-			#$"../Money".text=str(money)
-		#for i in range(0,(actCell+result)-Global.cells.size()):
-			#nextCell = i
-			#moveToCell(Global.cells[nextCell].get_center())
-			#await isOnPosition
-			#print(i)
-		#actCell=(actCell+result)-Global.cells.size()
-		#nextCell=actCell
-		#
-	#else : 
-			#for i in range(actCell,actCell+result):
-				##isOnPosition=false
-				#nextCell = i
-				#moveToCell(Global.cells[nextCell].get_center())
-				#await isOnPosition
-				#print(i)
-				#$"../Money".text=str(money)	
-			#actCell+=result
-			#nextCell=actCell;
+func yourTern(result:int): 	
 	for i in range(result,0,-1):
 		curcard = curcard.get_next_card();
 		moveToCell(curcard.get_center())
-		speedS+=i*10
 
 		if ( curcard.cellindex == 0 ):
 			money += 2000;
@@ -85,6 +55,7 @@ func yourTern(result:int):
 		await isOnPosition	
 	
 	var bcard: BuildingCard = curcard as BuildingCard;
+	var ecard: EventCard = curcard as EventCard;
 	
 	if ( bcard ):		
 		if bcard.player_index<=-1:
@@ -103,7 +74,18 @@ func yourTern(result:int):
 			money-=bcard.card_rent[ bcard.card_upgrade_level ];
 			Global.players[bcard.player_index].money+=bcard.card_rent[ bcard.card_upgrade_level ]
 			Global.send_message( "Попал на поле игрока " + str( bcard.player_index ) + ". Осталось " + str( money ) + " монет у игрока " + str( playerIndex ) );
+	if (ecard):
+		var randomCard = ecard.encounter[(randi_range(0,2))]
+		$"../EventWindow".show()
+		$"../EventWindow"._eventText.text = str(randomCard[0])  #Взять текст события
+		money+=randomCard[1]
+		if randomCard[2]!=null:			
+			curcard = Global.cells[randomCard[2]-1]
+			yourTern(1)
+		await $"../EventWindow".accepted
 		
+		ecard.encounter
+		return 0
 	#Добавить таракана
 	#добавить хлопок ладошкой по столу/лицу/таракану
 	'''if ( actCell < 0 || actCell >= Global.cells.size() ):

@@ -23,3 +23,9 @@ func _on_card_update():
 	_cname.text = card_name;
 	_cpicture.texture = card_picture;
 	_cbackground.color = background_color;
+	
+@onready var encounter =  [["Вы попали на тестовую клетку и теперь должны отдать создателям игры свою печень, и заплатить 4000 ",-4000,null],
+							["Вам сегодня везёт, можете потратить эти 3000 на еду",3000,19],
+							["Тут могла быть ваша рекламма",0,39]]
+func _messageText(number:int):
+	return encounter[number]

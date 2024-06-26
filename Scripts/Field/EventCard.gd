@@ -23,7 +23,7 @@ func on_player_enter( cur_player_index: int ):
 	var player: MonopolyPlayer = Global.players[ cur_player_index ];
 	var eventwindow: Node = $"/root/Game/EventWindow";
 
-	var randomCardData = encounter[(randi_range(0,2))]
+	var randomCardData = encounter[(randi_range(0,encounter.size()-1 ))]
 
 	eventwindow.show()
 	eventwindow._eventText.text = str(randomCardData[0])  #Взять текст события
@@ -41,7 +41,10 @@ func _on_card_update():
 	_cbackground.color = background_color;
 	
 @onready var encounter =  [["Вы попали на тестовую клетку и теперь должны отдать создателям игры свою печень, и заплатить 4000 ",-4000,null],
-							["Вам сегодня везёт, можете потратить эти 3000 на еду",3000,19],
-							["Тут могла быть ваша рекламма",0,39]]
+							["Вам сегодня везёт, можете потратить эти 3000 на еду",3000,null],
+							["Тут могла быть ваша рекламма",0,null],
+							["Великий вождь решил освободить соседей,занесите в казну 10000",10000,null],
+							["Цена на нефть резко поднялась, вы молодец и можете получить свои 120 рублей в кассе",120,null],
+							["Астрологи объявили неделю упавшего мыла, переместитесь в тюрьму",0,10]]
 func _messageText(number:int):
 	return encounter[number]
